@@ -10,6 +10,9 @@ const TodoForm = ({ setTodos }) => {
 
   const addNewTodo = (event) => {
     event.preventDefault();
+    if (!newTodo) {
+      return;
+    }
     setTodos((prevTodos) => [
       ...prevTodos,
       { text: newTodo, isCompleted: false },

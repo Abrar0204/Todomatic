@@ -11,7 +11,7 @@ const App = () => {
     <>
       <h1>Welcome to Todomatic!!</h1>
       <TodoForm setTodos={setTodos} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </>
   );
 };

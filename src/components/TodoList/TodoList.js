@@ -1,17 +1,13 @@
 import React from "react";
+import TodoItem from "../TodoItem/TodoItem";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, setTodos }) => {
   return (
     <div>
       <h2>Tasks:</h2>
       <ul>
         {todos.map((todo, index) => (
-          <li>
-            <label>
-              <input type="checkbox" checked={todo.isCompleted} />
-              {todo.text}
-            </label>
-          </li>
+          <TodoItem todo={todo} todoIndex={index} setTodos={setTodos} />
         ))}
       </ul>
     </div>
