@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TodoList = ({ todos }) => {
+const TodoList = ({ todos }) => {
   return (
     <div>
       <h2>Tasks:</h2>
@@ -17,3 +17,5 @@ export const TodoList = ({ todos }) => {
     </div>
   );
 };
+
+export default TodoList;
