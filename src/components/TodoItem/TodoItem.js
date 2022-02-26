@@ -7,10 +7,27 @@ const TodoItem = ({ todo, todoIndex, setTodos }) => {
     );
   };
 
+  const checkOrUncheckTodo = (event) => {
+    const checked = event.target.checked;
+    setTodos((prevTodos) =>
+      prevTodos.map((todo, index) => {
+        if (todoIndex === index) {
+          return { ...todo, isCompleted: !checked };
+        } else {
+          return todo;
+        }
+      })
+    );
+  };
+
   return (
     <li>
       <label>
-        <input type="checkbox" checked={todo.isCompleted} />
+        <input
+          type="checkbox"
+          deafultChecked={todo.isCompleted}
+          onChange={checkOrUncheckTodo}
+        />
         {todo.text}
       </label>
       <br />

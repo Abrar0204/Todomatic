@@ -7,7 +7,12 @@ const TodoList = ({ todos, setTodos }) => {
       <h2>Tasks:</h2>
       <ul>
         {todos.map((todo, index) => (
-          <TodoItem todo={todo} todoIndex={index} setTodos={setTodos} />
+          <TodoItem
+            key={index}
+            todo={todo}
+            todoIndex={index}
+            setTodos={setTodos}
+          />
         ))}
       </ul>
     </div>
