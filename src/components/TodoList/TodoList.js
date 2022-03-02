@@ -3,9 +3,9 @@ import TodoItem from "../TodoItem/TodoItem";
 
 const TodoList = ({ todos, setTodos }) => {
   return (
-    <div>
+    <div id="todo-list-container">
       <h2>Tasks:</h2>
-      <ul>
+      <ul id="todo-list">
         {todos.map((todo, index) => (
           <TodoItem
             key={index}

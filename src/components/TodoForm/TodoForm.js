@@ -17,11 +17,12 @@ const TodoForm = ({ setTodos }) => {
       ...prevTodos,
       { text: newTodo, isCompleted: false },
     ]);
+    setNewTodo("");
   };
 
   return (
-    <form onSubmit={addNewTodo}>
-      <input name="addTodo" onChange={handleInput} />
+    <form onSubmit={addNewTodo} id="todo-form">
+      <input name="addTodo" onChange={handleInput} value={newTodo} />
       <button type="submit">Add Todo</button>
     </form>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TodoForm from "./components/TodoForm/TodoForm";
 import TodoList from "./components/TodoList/TodoList";
+import "./App.css";
 
 const App = () => {
   const [todos, setTodos] = useState([
@@ -8,11 +9,11 @@ const App = () => {
   ]);
 
   return (
-    <>
-      <h1>Welcome to Todomatic!!</h1>
+    <div id="todo-container">
+      <h1 className="todo-heading">Welcome to Todomatic!!</h1>
       <TodoForm setTodos={setTodos} />
       <TodoList todos={todos} setTodos={setTodos} />
-    </>
+    </div>
   );
 };
 
